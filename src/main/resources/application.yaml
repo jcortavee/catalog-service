@@ -1,0 +1,15 @@
+server:
+  port: 9001
+  tomcat:
+    # Property that defines a limit for how much time Tomcat should wait between accepting a TCP connection
+    # from a client and actually receiving the HTTP request.
+    connection-timeout: 2s
+    # server.tomcat.keep-alive-timeout property to configure how long to keep a connection open
+    # while waiting for new HTTP requests.
+    keep-alive-timeout: 15s
+
+    threads:
+      # configure the maximum number of request processing threads
+      max: 50
+      # configure the minimum number of threads that should always be kept running
+      min-spare: 5
